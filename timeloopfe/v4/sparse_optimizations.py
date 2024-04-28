@@ -145,7 +145,7 @@ class RepresentationRank(DictNode):
 
     Attributes:
         name (str): The name of the rank.
-        format (str): The format of the rank. One of "CP", "B", "RLE", "UOP".
+        format (str): The format of the rank. One of "CP", "B", "RLE", "UOP", "HF", "D".
         metadata_word_bits (int): The number of metadata word bits.
         payload_word_bits (int): The number of payload word bits.
         flattened_rankIDs (list): A list of flattened rank IDs.
@@ -154,7 +154,7 @@ class RepresentationRank(DictNode):
     @classmethod
     def declare_attrs(cls, *args, **kwargs):
         super().declare_attrs(*args, **kwargs)
-        super().add_attr("format", ("CP", "B", "RLE", "UOP"))
+        super().add_attr("format", ("CP", "B", "RLE", "UOP", "D", "HF"))
         super().add_attr("metadata_word_bits", int, None)
         super().add_attr("payload_word_bits", int, None)
         super().add_attr("flattened_rankIDs", (list), None)
